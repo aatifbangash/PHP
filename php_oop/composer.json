@@ -1,0 +1,14 @@
+{
+    "name": "project/php",
+    "description": "test project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "atif"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": { "MYNAMESPACE\\": "src/" }
+    }
+}
