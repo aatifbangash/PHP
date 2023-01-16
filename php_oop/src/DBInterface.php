@@ -1,6 +1,7 @@
 <?php
 
 namespace MYNAMESPACE;
+
 /**
  * Interface is like a template/contract for the class. 
  * Classes implement the interface will must implement/define all the methods mentioned in the interface.
@@ -8,6 +9,13 @@ namespace MYNAMESPACE;
  */
 interface DBInterface
 {
+    /**
+     * @method create() this will be used to create new record in the database.
+     */
     public function create(array $data);
+
+    /**
+     * @method connect() this will be used to connect to the database. either MongoDB or Mysql.
+     */
     public function connect();
 }

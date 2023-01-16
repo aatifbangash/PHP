@@ -4,3 +4,8 @@
 * The abstract class (DBAbstract) implemented this Interface.
 * Further two classes (DBMysql and DBMongo) has extended the abstract class.
 * The userController in the index.php file is used to set the database and calling the registerUser() method.
+
+### How to run
+* git clone of the repo into /var/www/html
+* run
+* >$ composer update

@@ -1,6 +1,7 @@
 <?php
 
 namespace MYNAMESPACE;
+
 /**
  * abstract class is same as the normal class. But we cann't create the Object for abstract class.
  * abstract class can only be extended. It can also implement the interface same as normal class.
@@ -14,11 +15,23 @@ namespace MYNAMESPACE;
  */
 abstract class DBAbstract implements DBInterface
 {
+    /**
+     * @method connect() overrided from the interface and also decleared as a abstract for sub-classes.
+     */
     abstract public function connect();
+
+    /**
+     * @method dbType() is abstract method to be declared in all the sub-classes. and will be called in the abstract class.
+     */
     abstract public function dbType();
 
+    /**
+     * @method create() overrided from the interface and treated as a normal method. It is being used as a shared method
+     * accross all the sub-classes.
+     */
     public function create(array $data)
     {
+        /** @var $this->dbType() is set in the child class but called here in the abstract class */
         if ($this->dbType() == "Mysql") {
 
             $sql = "SQL:- Insert INTO User SET ";
